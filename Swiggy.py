@@ -2,7 +2,7 @@ import time
 
 # This is the main class where it is working for multiple purpose
 
-print("#"*35,"WELCOME TO SWIGGY!!!","#"*35)
+print("~"*35,"WELCOME TO SWIGGY!!!","~"*35)
 print("\n")
 print("We believe in giving you the best service and good taste!")
 print("#"*35,"Best food ordering app :)","#"*35) 
@@ -17,11 +17,12 @@ class Restaurant:
     
     
     def display(self):  # This method is used to display the menu items
-    
+        print('Menu')
+        print('-'*10)
         for i, j in zip(self.menu, self.price):
-            print(i, ':', j)
+            print("|",i, ':', j,"|")
 
-    def priceamount(self, flag1):  # This method will shows the amount to be paidprint("\n")
+    def priceamount(self, flag1 ):  # This method will shows the amount to be paidprint("\n")
     
         amount = 0
         ordered = []
@@ -30,6 +31,11 @@ class Restaurant:
         if (select == 'Y' or select == "y") :
             while True :
                 if count == 3:
+                    print("YOUR FOOD IS PREPARING........")
+                    time.sleep(5)
+                    print("YOUR FOOD IS PREPARED :)")
+                    print("YOUR FOOD IS OUT FOR DELIVERY...")
+                    print("Thank you......Please Visit Again")
                     return flag1
                 else:    
                     print("YOU ORDERED LIMIT IS 3")
@@ -71,6 +77,7 @@ class Restaurant:
         time.sleep(processing_time)
         print("YOUR FOOD IS PREPARED :)")
         print("YOUR FOOD IS OUT FOR DELIVERY...")
+        print("Thank you......Please Visit Again")
 
 
     def compare(self, choose2, choose3):
@@ -192,9 +199,8 @@ if __name__ == "__main__":
                         choose.display()
                         print()
                         yes = choose.priceamount(flag1)
-                        if yes :
-                            if flag1:
-                                choose.timetaken(processing_time1)
+                        if yes:
+                            pass
                         else:
                             break
                     elif select == 2:
@@ -203,10 +209,8 @@ if __name__ == "__main__":
                         choose.display()
                         print()
                         yes = choose.priceamount(flag1)
-                        if yes :
-                            if flag1:
-
-                                choose.timetaken(processing_time2)
+                        if yes:
+                            pass
                         else:
                             break
                     elif select == 3:
@@ -216,8 +220,7 @@ if __name__ == "__main__":
                         print()
                         yes = choose.priceamount(flag1)
                         if yes:
-                            if flag1:
-                                choose.timetaken(processing_time3)
+                            pass
                         else:
                             break
                 elif Method == 2:
@@ -245,4 +248,3 @@ if __name__ == "__main__":
 
 
 
-            
