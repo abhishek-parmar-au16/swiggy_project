@@ -172,7 +172,7 @@ if __name__ == "__main__":
     menu3 = ["Lasagna", "Sphagetti", "Chilly Mushroom", "Pizza", "Pasta"]
     price3 = [150, 160, 190, 225, 200]
     processing_time3 = 5
-    # vaibhav
+    
 
     flag = True
     flag1 = False
@@ -189,8 +189,8 @@ if __name__ == "__main__":
 
                 if Method == 1:
                     print("*"*20,"1. Taj Hotel","*"*20)
-                    print("*"*20,"2. Al Taj","*"*20)
-                    print("*"*20,"3. Diggin","*"*20)
+                    print("*"*20,"2. Hyderabadi Darbar","*"*20)
+                    print("*"*20,"3. Baba Da Dhaba","*"*20)
 
                     select = int(input("Select your Restaurant:"))
                     if select == 1:
@@ -225,11 +225,12 @@ if __name__ == "__main__":
                             break
                 elif Method == 2:
                     choose1 = Restaurant(menu1, price1)
+                    # print(type(choose1))
                     choose2 = Restaurant(menu2, price2)
                     choose3 = Restaurant(menu3, price3)
                     choose1.compare(choose2, choose3)
             elif input2 == 2:
-                print("1. Taj Hotel  2. Al Taj  3. Diggin")
+                print("1. Taj Hotel  2. Hyderabadi Darbar  3. Baba Da Dhaba")
                 user1 = int(input("SELECT YOUR RESTAURANT:"))
                 if user1 == 1:
                     menu1.append(input("Enter the dish name:"))
